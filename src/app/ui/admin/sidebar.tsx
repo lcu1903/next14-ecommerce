@@ -12,7 +12,7 @@ import {
   RevenueIcon,
   SettingsIcon,
   ReportIcon,
-} from "./../../../public/index";
+} from "../../public/index";
 const sideBar = [
   {
     title: "Pages",
@@ -26,14 +26,14 @@ const sideBar = [
     title: "Analytics",
     list: [
       { name: "Revenue", href: "/admin/revenue", icon: <RevenueIcon /> },
-      { name: "Reports", href: "/admin/reports",icon: <ReportIcon />},
+      { name: "Reports", href: "/admin/reports", icon: <ReportIcon /> },
     ],
   },
   {
     title: "User",
     list: [
-      { name: "Setting", href: "/admin/setting",icon: <SettingsIcon />},
-      { name: "Logout", href: "/admin/logout",icon: <LogoutIcon />},
+      { name: "Setting", href: "/admin/setting", icon: <SettingsIcon /> },
+      { name: "Logout", href: "/admin/logout", icon: <LogoutIcon /> },
     ],
   },
 ];

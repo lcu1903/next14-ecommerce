@@ -12,6 +12,8 @@ const config: Config = {
         'admin-main-content': '#0F1035',
         text: '#DCF2F1',
         'sub-content': '#365486',
+        
+
       },
     },
   },
