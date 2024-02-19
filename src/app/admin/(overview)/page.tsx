@@ -15,7 +15,7 @@ const DashboardPage = () => {
         <Card />
       </div>
       <div>
-        <Transactions/>
+        <Transactions />
       </div>
       <div>
         

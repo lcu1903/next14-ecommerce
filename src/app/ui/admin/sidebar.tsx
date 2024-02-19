@@ -19,7 +19,7 @@ const sideBar = [
     title: "Pages",
     list: [
       { name: "Dashboard", href: "/admin", icon: <DashboardIcon /> },
-      { name: "Users", href: "/users", icon: <UserIcon/>},
+      { name: "Users", href: "/admin/users", icon: <UserIcon/>},
       { name: "Products", href: "/admin/products", icon: <ProductsIcon /> },
       { name: "Orders", href: "/admin/orders", icon: <OrdersIcon /> },
     ],
