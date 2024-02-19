@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import React from "react";
 import {
+  UserIcon,
   DashboardIcon,
   LogoutIcon,
   OrdersIcon,
@@ -18,6 +19,7 @@ const sideBar = [
     title: "Pages",
     list: [
       { name: "Dashboard", href: "/admin", icon: <DashboardIcon /> },
+      { name: "Users", href: "/users", icon: <UserIcon/>},
       { name: "Products", href: "/admin/products", icon: <ProductsIcon /> },
       { name: "Orders", href: "/admin/orders", icon: <OrdersIcon /> },
     ],

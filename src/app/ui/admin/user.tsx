@@ -11,8 +11,8 @@ function User() {
     <div className="flex rounded-sm bg-sub-content ">
       {user.map((user) => {
         return (
-          <div key={user.name} className="flex items-center">
-            <UserIcon className="h-10 w-10 rounded-full" />
+          <div key={user.name} className="flex items-center justify-center">
+            <div className="h-10 w-10 rounded-full"><UserIcon /></div>
             <span>
               <h1>{user.name}</h1>
               <h1 className="text-sm">{user.role}</h1>
