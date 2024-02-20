@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.button{
+   @apply rounded-sm  bg-opacity-70 p-2 m-1;
+}

@@ -6,7 +6,7 @@ function paginate<T>(items: T[], pageSize: number, pageNumber: number): T[] {
 function Pagination() {
   return (
     <div className="flex  px-4 py-2 ">
-      <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 mr-3">
+      <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 mr-3 ">
         Previous
       </button>
       <button className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">
