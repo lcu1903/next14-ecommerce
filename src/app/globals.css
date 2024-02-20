@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .button{
-   @apply rounded-sm  bg-opacity-70 p-2 m-1;
+   @apply rounded-sm  bg-opacity-70 p-2 m-1 hover:bg-opacity-50;
 }
