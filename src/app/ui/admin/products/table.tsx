@@ -87,7 +87,7 @@ function ProductTable() {
                 <td>{product.amount}</td>
                 <td>{product.price}</td>
                 <td>
-                  <Link href={"/"}>
+                  <Link href={`/admin/products/${product.id}`}>
                     <button className="button bg-green-500  ">View</button>
                   </Link>
                 </td>

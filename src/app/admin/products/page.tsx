@@ -6,11 +6,10 @@ export const metadata: Metadata = {
   description: "Admin Products",
 };
 
-
 function ProductsPage() {
   return (
     <div>
-      <ProductTable/>
+      <ProductTable />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import clsx from "clsx";
 function Card() {
   return (
     <div className="flex py-4 w-full">
-      <div className="hover:scale-105 mr-4 flex w-[25%] justify-center rounded-md bg-sub-content  p-2 transition-all  hover:bg-opacity-70 ">
+      <div className="hover:scale-105 mr-4 flex w-full justify-center rounded-md bg-sub-content  p-2 transition-all  hover:bg-opacity-70 ">
         <div className="pt-4">
           <TotalUsersIcon />
         </div>
@@ -22,7 +22,7 @@ function Card() {
           </span>
         </div>
       </div>
-      <div className="hover:scale-105 mr-4 flex w-[25%] justify-center rounded-md bg-sub-content  p-2 transition-all  hover:bg-opacity-70 ">
+      <div className="hover:scale-105 mr-4 flex w-full justify-center rounded-md bg-sub-content  p-2 transition-all  hover:bg-opacity-70 ">
         <div className="pt-4">
           <TotalUsersIcon />
         </div>
@@ -40,7 +40,7 @@ function Card() {
           </span>
         </div>
       </div>
-      <div className="hover:scale-105 mr-4 flex w-[25%] justify-center rounded-md bg-sub-content  p-2 transition-all  hover:bg-opacity-70 ">
+      <div className="hover:scale-105 mr-4 flex w-full justify-center rounded-md bg-sub-content  p-2 transition-all  hover:bg-opacity-70 ">
         <div className="pt-4">
           <TotalUsersIcon />
         </div>

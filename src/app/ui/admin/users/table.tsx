@@ -64,7 +64,7 @@ function UserTable() {
                 className={`${
                   index % 2 === 0
                     ? "bg-sub-content"
-                    : "bg-admin-main-content bg-opacity-70"
+                    : "bg-admin-main-content bg-opacity-70 "
                 }`}
               >
                 <td>{user.name}</td>
@@ -73,7 +73,7 @@ function UserTable() {
                 <td>{user.role}</td>
                 <td>{user.createdAt.toString()}</td>
                 <td>
-                  <Link href={"/"}>
+                  <Link href={`/admin/users/${user.id}`}>
                     <button className="button bg-green-500  ">View</button>
                   </Link>
                   <button className="button bg-red-400  ">Delete</button>

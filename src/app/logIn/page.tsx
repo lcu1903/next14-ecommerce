@@ -24,8 +24,7 @@ function LoginPage() {
             peer-placeholder-shown:scale-100 peer-focus:-translate-y-8  peer-placeholder-shown:translate-y-1 -translate-x-1
             peer-focus:scale-75 peer-focus:text-text
             transition-all duration-150"
-            
-          >
+            >
             Username
           </label>
         </div>
