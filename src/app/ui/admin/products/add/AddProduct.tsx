@@ -1,14 +1,21 @@
+"use client";
+import { createProduct } from "@/app/lib/actions/products/actions";
 function AddProduct() {
   return (
-    <div>
-      <form method="GET" action="./add" className="grid grid-cols-2 gap-4 p-4 ">
+    
+      <form
+        action={createProduct}
+        className="grid grid-cols-2 gap-4 p-4 "
+      >
         <input
           type="text"
           name="name"
+          id="name"
           placeholder="Name"
           className="h-10 rounded-md bg-sub-content"
         />
-        <select name="cat" id="cat" className="rounded-md bg-sub-content">
+        
+        <select name="type" id="type" className="rounded-md bg-sub-content">
           <option value="general">Choose a Category</option>
           <option value="Electric">Electric</option>
           <option value="Acoustic">Acoustic</option>
@@ -18,6 +25,7 @@ function AddProduct() {
 
         <input
           name="price"
+          id="price"
           type="text"
           placeholder="Price"
           className="h-10 rounded-md bg-sub-content"
@@ -30,13 +38,15 @@ function AddProduct() {
           <option value="Rosen">Rosen</option>
         </select>
         <input
-          name="stock"
-          type="number"
+          name="amount"
+          id="amount"
+          type="text"
           placeholder="Stock"
           className="h-10 rounded-md bg-sub-content "
         />
         <input
           name="tag"
+          id="tag"
           type="text"
           placeholder="Tag"
           className="h-10 rounded-md bg-sub-content "
@@ -56,7 +66,7 @@ function AddProduct() {
           Submit
         </button>
       </form>
-    </div>
+    
   );
 }
 

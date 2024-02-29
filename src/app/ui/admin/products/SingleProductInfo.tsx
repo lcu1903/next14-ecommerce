@@ -1,16 +1,8 @@
-import { Product } from "@/app/lib/definition";
+import { ProductType } from "@/app/lib/definition";
 import Image from "next/image";
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Guitar 1",
-    description: "description A",
-    amount: 5,
-    price: "100",
-    type: "Electric",
-  },
-];
-function SingleProductInfo() {
+
+
+function SingleProductInfo({ products }: { products: ProductType[] }) {
   return (
     <div>
       <div className="my-4 flex rounded-md bg-sub-content bg-opacity-30 py-4">

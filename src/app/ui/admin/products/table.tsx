@@ -1,52 +1,11 @@
 import Pagination from "@/app/ui/admin/pagination";
 import Search from "@/app/ui/admin/search";
 import Link from "next/link";
-import { Product } from "@/app/lib/definition";
+import { ProductType } from "@/app/lib/definition";
 import { PlusIcon } from "@/app/public";
 
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Guitar 1",
-    description: "description A",
-    amount: 5,
-    price: "100",
-    type: "Electric",
-  },
-  {
-    id: 2,
-    name: "Guitar 2",
-    description: "description B",
-    amount: 3,
-    price: "150",
-    type: "Acoustic",
-  },
-  {
-    id: 3,
-    name: "Guitar 3",
-    description: "description C",
-    amount: 2,
-    price: "200",
-    type: "Electric",
-  },
-  {
-    id: 4,
-    name: "Guitar 4",
-    description: "description D",
-    amount: 7,
-    price: "120",
-    type: "Acoustic",
-  },
-  {
-    id: 5,
-    name: "Guitar 5",
-    description: "description E",
-    amount: 4,
-    price: "180",
-    type: "Electric",
-  },
-];
-function ProductTable() {
+async function ProductTable({ products }: { products: ProductType[] }) {
+  
   return (
     <div>
       <div className=" p-2">
@@ -66,13 +25,14 @@ function ProductTable() {
             <tr className="rounded-md text-left text-sm font-normal  ">
               <th scope="col ">ID</th>
               <th scope="col">Name</th>
-              <th scope="col">Type</th>
+              <th scope="col">Category</th>
               <th scope="col">Amount</th>
               <th scope="col">Price</th>
+              <th scope="col">Tag</th>
             </tr>
           </thead>
           <tbody>
-            {products.map((product, index) => (
+            {products?.map((product, index) => (
               <tr
                 key={index}
                 className={`${
@@ -81,13 +41,14 @@ function ProductTable() {
                     : "bg-admin-main-content bg-opacity-70"
                 }`}
               >
-                <td>{product.id}</td>
+                <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.type}</td>
                 <td>{product.amount}</td>
                 <td>{product.price}</td>
+                <td>#{product.tag}</td>
                 <td>
-                  <Link href={`/admin/products/${product.id}`}>
+                  <Link href={`/admin/products/${product._id}`}>
                     <button className="button bg-green-500  ">View</button>
                   </Link>
                 </td>

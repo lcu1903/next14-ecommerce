@@ -1,15 +1,20 @@
 import { Metadata } from "next";
-import { Product } from "@/app/lib/definition";
-import ProductTable from "@/app/ui/admin/products/table";
+import { ProductType } from "@/app/lib/definition";
+import  ProductTable from "@/app/ui/admin/products/table";
+import { getAllProduct } from "@/app/lib/actions/products/actions";
 export const metadata: Metadata = {
   title: "Admin Products",
   description: "Admin Products",
 };
 
-function ProductsPage() {
+
+async function ProductsPage() {
+  const productTable  = await getAllProduct();
+  
+
   return (
     <div>
-      <ProductTable />
+      <ProductTable products={productTable} />
     </div>
   );
 }
