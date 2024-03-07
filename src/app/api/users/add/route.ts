@@ -9,6 +9,5 @@ export async function GET(res: NextResponse) {
 }
 export async function POST(req: NextRequest) {
   const data = await req.json();
-  console.log("CONNECT");
   return NextResponse.json({ data });
 }

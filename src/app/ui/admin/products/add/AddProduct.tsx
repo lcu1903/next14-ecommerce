@@ -13,6 +13,7 @@ function AddProduct() {
           id="name"
           placeholder="Name"
           className="h-10 rounded-md bg-sub-content"
+          required
         />
         
         <select name="type" id="type" className="rounded-md bg-sub-content">
@@ -29,9 +30,10 @@ function AddProduct() {
           type="text"
           placeholder="Price"
           className="h-10 rounded-md bg-sub-content"
+          required
         />
         <select name="brand" id="brand" className="rounded-md bg-sub-content">
-          <option value="general">Choose a Brand</option>
+          <option value=" ">Choose a Brand</option>
           <option value="Yamaha">Yamaha</option>
           <option value="Fender">Fender</option>
           <option value="Epiphone">Epiphone</option>

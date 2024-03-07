@@ -1,11 +1,19 @@
+"use client";
 import Pagination from "@/app/ui/admin/pagination";
 import Search from "@/app/ui/admin/search";
 import Link from "next/link";
 import { ProductType } from "@/app/lib/definition";
 import { PlusIcon } from "@/app/public";
+import { deleteProduct } from "@/app/lib/actions/products/actions";
 
-async function ProductTable({ products }: { products: ProductType[] }) {
-  
+
+async function handleDelete(id: string) {
+  await deleteProduct(id);
+  return;
+}
+
+function ProductTable({ products }: { products: ProductType[] }) {
+
   return (
     <div>
       <div className=" p-2">
@@ -51,6 +59,14 @@ async function ProductTable({ products }: { products: ProductType[] }) {
                   <Link href={`/admin/products/${product._id}`}>
                     <button className="button bg-green-500  ">View</button>
                   </Link>
+                </td>
+                <td>
+                  <button
+                    onClick={() => handleDelete(product._id)}
+                    className="button bg-red-500  "
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

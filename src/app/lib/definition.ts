@@ -1,5 +1,5 @@
 export type ProductType = {
-  _id: number;
+  _id: string;
   name: string;
   description: string;
   amount: number;
@@ -10,7 +10,7 @@ export type ProductType = {
 };
 
 export type UserType = {
-  _id: number;
+  _id: string;
   name: string;
   username: string;
   email: string;

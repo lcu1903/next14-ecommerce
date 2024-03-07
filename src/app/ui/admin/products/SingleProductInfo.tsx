@@ -1,3 +1,4 @@
+"use client"
 import { ProductType } from "@/app/lib/definition";
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ function SingleProductInfo({ products }: { products: ProductType[] }) {
           ></Image>
         </div>
         <div className="w-full pl-10  pr-2">
-          {products.map((product, index) => (
+          {products?.map((product, index) => (
             <div key={index} className="rounded-md bg-sub-content p-2 ">
               <div className="flex h-20 flex-col">
                 <label className="">Name</label>

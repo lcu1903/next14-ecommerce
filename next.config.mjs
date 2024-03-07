@@ -5,6 +5,7 @@ const nextConfig = {
       "mongodb-client-encryption": false,
       aws4: false,
     };
+    
 
     return config;
   },

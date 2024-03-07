@@ -1,32 +1,40 @@
+import { addUser } from "@/app/lib/actions/users/actions";
+
 function AddUser() {
     return ( <div>
-        <form action="" className="grid grid-cols-2 gap-4 p-4 ">
+        <form action={addUser} className="grid grid-cols-2 gap-4 p-4 ">
           <input
+          name="name"
             type="text"
             placeholder="Name"
             className="h-10 rounded-md bg-sub-content"
           />
           <input
+            name="username"
             type="text"
             placeholder="Username"
             className="h-10 rounded-md bg-sub-content"
           />
           <input
+            name="email"
             type="email"
             placeholder="Email"
             className="h-10 rounded-md bg-sub-content"
           />
           <input
+          name="password"
             type="password"
             placeholder="Password"
             className="h-10 rounded-md bg-sub-content"
           />
           <input
+            name="tel"
             type="tel"
             placeholder="Phone Number"
             className="h-10 rounded-md bg-sub-content"
           />
           <select
+
             id="role"
             name="role"
             className="h-10 rounded-md bg-sub-content"

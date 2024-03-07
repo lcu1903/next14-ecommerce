@@ -1,9 +1,9 @@
-import { User } from "@/app/lib/definition";
+import { UserType } from "@/app/lib/definition";
 import Image from "next/image";
 
-const users: User[] = [
+const users: UserType[] = [
   {
-    id: 1,
+    _id: "1",
     name: "John Doe",
     email: "johndoe@example.com",
     phone: "123-456-7890",

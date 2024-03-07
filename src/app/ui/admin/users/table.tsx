@@ -1,38 +1,15 @@
-import { User } from "@/app/lib/definition";
+import { getFilteredUser } from "@/app/lib/actions/users/actions";
+import { UserType } from "@/app/lib/definition";
 import { PlusIcon } from "@/app/public";
 import Pagination from "@/app/ui/admin/pagination";
 import Search from "@/app/ui/admin/search";
 import Link from "next/link";
-const users: User[] = [
-  {
-    id: 1,
-    name: "John Doe",
-    email: "johndoe@example.com",
-    phone: "123-456-7890",
-    createdAt: "2022-01-01",
-    role: "admin",
-    username: "johndoe",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    email: "janesmith@example.com",
-    phone: "987-654-3210",
-    createdAt: "2022-01-02",
-    role: "customer",
-    username: "janesmith",
-  },
-  {
-    id: 3,
-    name: "Alice Johnson",
-    email: "alicejohnson@example.com",
-    phone: "555-123-4567",
-    createdAt: "2022-01-03",
-    role: "customer",
-    username: "alicejohnson",
-  },
-];
-function UserTable() {
+
+async function UserTable({ users, query }: { users: UserType[]; query: string }) {
+  if(query){
+    users = await getFilteredUser(query);
+  }
+  
   return (
     <div>
       <div className=" p-2">
@@ -71,9 +48,9 @@ function UserTable() {
                 <td>{user.email}</td>
                 <td>{user.phone}</td>
                 <td>{user.role}</td>
-                <td>{user.createdAt.toString()}</td>
+                <td>{user.createdAt.toLocaleString("en-US")}</td>
                 <td>
-                  <Link href={`/admin/users/${user.id}`}>
+                  <Link href={`/admin/users/${user._id}`}>
                     <button className="button bg-green-500  ">View</button>
                   </Link>
                   <button className="button bg-red-400  ">Delete</button>
