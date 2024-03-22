@@ -51,17 +51,8 @@ export async function getAllProduct() {
   connectToDB();
   try {
     const data: ProductType[] = await Product.find({});
-
-    const res = await fetch("http://localhost:3000/api/products", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    });
-    
-    if (res.ok) {
-      return JSON.parse(JSON.stringify(data));
-    }else{
-      return Error("Failed to fetch product");
-    }
+    return JSON.parse(JSON.stringify(data));
+   
   } catch (error) {
     console.error("Database Error:", error);
     throw new Error("Failed to fetch product table.");
@@ -71,13 +62,11 @@ export async function getAllProduct() {
 export async function getProductById(id: string) {
   const data = await Product.findById(id);
   const res = await fetch(`/api/products/${id}`, {
-    method: "UPDATE",
-    body: JSON.stringify(data),
+    method: "GET",
     headers: { "Content-Type": "application/json" },
   });
   if (res.ok) {
-    const data = await res.json();
-    return data;
+    return JSON.parse(JSON.stringify(data));
   } else {
     return Error("Failed to fetch product");
   }

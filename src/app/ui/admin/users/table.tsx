@@ -5,11 +5,17 @@ import Pagination from "@/app/ui/admin/pagination";
 import Search from "@/app/ui/admin/search";
 import Link from "next/link";
 
-async function UserTable({ users, query }: { users: UserType[]; query: string }) {
-  if(query){
+async function UserTable({
+  users,
+  query,
+}: {
+  users: UserType[];
+  query: string;
+}) {
+  if (query) {
     users = await getFilteredUser(query);
   }
-  
+
   return (
     <div>
       <div className=" p-2">
@@ -35,7 +41,7 @@ async function UserTable({ users, query }: { users: UserType[]; query: string })
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => (
+            {users.map((user: UserType, index: number) => (
               <tr
                 key={index}
                 className={`${

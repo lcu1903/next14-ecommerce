@@ -1,18 +1,9 @@
 import { UserType } from "@/app/lib/definition";
 import Image from "next/image";
 
-const users: UserType[] = [
-  {
-    _id: "1",
-    name: "John Doe",
-    email: "johndoe@example.com",
-    phone: "123-456-7890",
-    createdAt: "2022-01-01",
-    role: "admin",
-    username: "johndoe",
-  },
-];
-function SingleUserProfile() {
+function SingleUserProfile({ users }: { users: UserType[] }) {
+  console.log(users);
+
   return (
     <div>
       <div className="my-4 flex rounded-md bg-sub-content bg-opacity-30 py-4">

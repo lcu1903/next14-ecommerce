@@ -1,8 +1,8 @@
-import { getAllUser } from "@/app/lib/actions/users/actions";
+
 import { NextResponse, NextRequest } from "next/server";
 
 export async function GET(res: NextResponse) {
-  const data = await getAllUser();
+  const data = await res.json();
   return NextResponse.json({
     data,
   });

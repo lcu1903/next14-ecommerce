@@ -9,7 +9,7 @@ export type ProductType = {
   type: string;
 };
 
-export type UserType = {
+export type UserType  = {
   _id: string;
   name: string;
   username: string;
@@ -18,3 +18,20 @@ export type UserType = {
   createdAt: Date | string;
   role: "admin" | "customer" | "guest";
 };
+
+export type OrderType = {
+  _id: string;
+  productId: string;
+  productName: string;
+  productPrice: string;
+  productQuantity: number;
+  totalAmount: string;
+  orderDate: string;
+  deliveryDate: string;
+  status: string;
+  userId: string;
+  address: string;
+  contact: string;
+  email: string;
+};
+
